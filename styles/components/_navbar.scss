@@ -1,0 +1,77 @@
+.container-mobile {
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.container-desktop {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+
+
+
+
+
+  .navbar__desktop {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 2rem;
+
+    >div {
+      display: flex;
+      gap: 2rem;
+    }
+
+    &__left {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        gap: 1rem;
+      }
+    }
+
+    &__logo {
+      // ...existing styles...
+    }
+
+    &__menu {
+      // ...existing styles...
+    }
+
+    &__item {
+      // ...existing styles...
+    }
+
+    &__link {
+      // ...existing styles...
+    }
+
+    &__right {
+      // ...existing styles...
+    }
+
+    &__icons {
+      // ...existing styles...
+    }
+
+    &__icon {
+      // ...existing styles...
+    }
+
+    &__profile {
+      // ...existing styles...
+    }
+  }
+
+
+}
