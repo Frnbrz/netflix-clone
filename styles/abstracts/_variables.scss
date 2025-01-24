@@ -57,7 +57,7 @@ $breakpoints: (
   'small': 320px,
   'medium': 768px,
   'large': 1024px,
-) !default;
+  ) !default;
 
 
 
@@ -69,3 +69,8 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+
+// Anchor
+/// @type Color
+$link-hover: rgb(209, 213, 219) !default;
