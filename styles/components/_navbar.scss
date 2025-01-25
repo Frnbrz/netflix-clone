@@ -14,30 +14,15 @@
     display: block;
   }
 
-
-
-
-
-
   .navbar__desktop {
     display: flex;
     justify-content: space-between;
     margin: 0.5rem 2rem;
 
-    >div {
+    &__left {
+
       display: flex;
       gap: 2rem;
-    }
-
-    &__left {
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        display: flex;
-        gap: 1rem;
-      }
     }
 
     &__logo {
@@ -45,7 +30,13 @@
     }
 
     &__menu {
-      // ...existing styles...
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      display: flex;
+      gap: 1rem;
+
     }
 
     &__item {
@@ -57,11 +48,14 @@
     }
 
     &__right {
-      // ...existing styles...
+      display: flex;
+      gap: 2rem;
+      align-items: center;
     }
 
     &__icons {
-      // ...existing styles...
+      display: flex;
+      gap: 1rem;
     }
 
     &__icon {
