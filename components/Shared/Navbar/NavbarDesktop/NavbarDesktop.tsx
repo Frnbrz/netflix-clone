@@ -1,13 +1,12 @@
 import { BellRing, Search } from "lucide-react";
 import Link from "next/link";
+import { Logo } from "@/components/Shared/Logo/Logo";
 
 export default function NavbarDesktop() {
   return (
     <nav className="navbar__desktop">
       <div className="navbar__desktop__left">
-        <Link href="/" className="logo">
-          Logo
-        </Link>
+        <Logo />
         <ul className="navbar__desktop__menu">
           <li className="navbar__desktop__item">
             <Link href='#' className="navbar__desktop__link">
