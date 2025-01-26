@@ -25,10 +25,6 @@
       align-items: center;
     }
 
-    &__logo {
-      // ...existing styles...
-    }
-
     &__menu {
       list-style: none;
       padding: 0;
@@ -43,10 +39,6 @@
       // ...existing styles...
     }
 
-    &__link {
-      // ...existing styles...
-    }
-
     &__right {
       display: flex;
       gap: 2rem;
@@ -56,10 +48,6 @@
     &__icons {
       display: flex;
       gap: 1rem;
-    }
-
-    &__icon {
-      // ...existing styles...
     }
 
     &__profile {
