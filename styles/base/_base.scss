@@ -28,7 +28,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: abstracts.$dark-grey;
+  color: abstracts.$light-grey;
   text-decoration: none;
 
   &:hover {
@@ -37,10 +37,18 @@ a {
   }
 }
 
+html {
+  color-scheme: dark;
+}
+
 .logo {
   font-weight: 800;
   font-size: 1.5rem;
-  color: #E50914;
+  color: abstracts.$color-logo;
+
+  &:hover {
+    color: darken(abstracts.$color-logo, 20%);
+  }
 }
 
 .icon {}
