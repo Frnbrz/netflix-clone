@@ -28,7 +28,6 @@ export default function SliderVideo() {
           </div>
         </div>
       </div>
-
       <div className="slider-video__gradient" />
     </div>
   )
