@@ -51,11 +51,40 @@ html {
   }
 }
 
-.icon {}
 
-.button {}
+.button {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  width: max-content;
+  font-size: 1rem;
 
+  @media (max-width: 600px) {
+    font-size: 0.875rem;
+  }
 
-.full {
-  height: 100vh;
+  &--primary {
+    background-color: abstracts.$button-color;
+    color: darken(abstracts.$button-color, 100%);
+
+    &:hover {
+      background-color: darken(abstracts.$button-color, 10%);
+    }
+  }
+
+  &--secondary {
+    background-color: abstracts.$button-color-secondary;
+
+    &:hover {
+      background-color: darken(abstracts.$button-color-secondary, 10%);
+    }
+  }
+}
+
+.icon {
+  margin: 0;
+  padding: 0;
 }
