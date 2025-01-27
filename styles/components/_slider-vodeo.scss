@@ -90,6 +90,11 @@
     display: flex;
     gap: 1rem;
     margin-top: 1.25rem;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   &__gradient {
