@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 .slider-video {
   position: relative;
   width: 100%;
@@ -61,7 +63,7 @@
   &__title {
     font-size: 2rem;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px darken(abstracts.$black-color, 50%);
 
     @media (min-width: 768px) {
       font-size: 3rem;
@@ -111,14 +113,14 @@
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 0.5rem;
-    fill: black;
+    fill: abstracts.$black-color;
   }
 
   &__button-secondary {
-    background-color: #6b7280; // Equivalent to bg-gray-500/50
+    background-color: abstracts.$button-color-secondary;
 
     &:hover {
-      background-color: #4b5563; // Equivalent to bg-gray-500/40
+      background-color: darken(abstracts.$button-color-secondary, 20%);
     }
   }
 }

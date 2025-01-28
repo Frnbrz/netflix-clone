@@ -9,7 +9,6 @@ import { useScrollPosition } from "@/hooks/useScrollPosition";
 export default function NavbarDesktop() {
   const scrollPosition = useScrollPosition()
 
-  console.log(scrollPosition)
   return (
     <nav className={(scrollPosition ? 'navbar__desktop--bottom' : 'navbar__desktop--top') + " navbar__desktop"}>
       <div className="navbar__desktop__left">
@@ -26,8 +25,8 @@ export default function NavbarDesktop() {
       </div>
       <div className="navbar__desktop__right">
         <div className="navbar__desktop__icons">
-          <Search className="icon" aria-label="Search" />
-          <BellRing className="icon" aria-label="Notifications" />
+          <Search className="button icon" aria-label="Search" />
+          <BellRing className="button icon" aria-label="Notifications" />
         </div>
         <div className="navbar__desktop__profile">
           <span>User</span>

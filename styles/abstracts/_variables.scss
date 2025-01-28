@@ -42,24 +42,26 @@ $dark-grey: rgb(68, 68, 68) !default;
 /// @type Color
 $color-logo: rgb(229, 9, 20) !default;
 
-
 /// Button color primary
 /// @type Color
 $button-color: rgb(255, 255, 255) !default;
 
 /// Button color secondary
 /// @type Color
-$button-color-secondary: rgb(90, 89, 90, 0.5) !default;
-
+$button-color-secondary: rgb(107, 114, 128, 0.5) !default;
 
 
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
 
+/// Black
+/// @type Color
+$black-color: rgb(0, 0, 0);
 
-
-
+/// White
+/// @type Color
+$white-color: rgb(255, 255, 255);
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
