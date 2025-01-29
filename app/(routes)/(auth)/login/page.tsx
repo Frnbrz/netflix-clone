@@ -14,8 +14,8 @@ export default function LoginPage() {
       </div>
 
       <div className="login-page__footer">
-        <p className="login-page__footer--text">¿Todavía sin Netflix?</p>
-        <Link href="/register" className="link">
+        <p className="login-page__footer__text">¿Todavía sin Netflix?</p>
+        <Link href="/register" className="link login-page__footer__link">
           Suscríbete ya
         </Link>
       </div>
