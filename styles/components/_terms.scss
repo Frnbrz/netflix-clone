@@ -1,0 +1,30 @@
+.terms {
+  margin-bottom: 2.5rem;
+
+  margin-top: 1rem;
+
+  font-size: 0.75rem;
+
+  line-height: 1rem;
+
+  color: rgb(75, 85, 99);
+
+  &__main {
+    margin-bottom: 1.25rem;
+  }
+
+  &__button {
+
+    flex-shrink: 0;
+    margin-left: 0.25rem;
+    height: fit-content;
+    padding: 0px;
+    color: rgb(0, 113, 235);
+    background-color: transparent;
+
+  }
+
+  &__text {
+    height: 7rem;
+  }
+}
