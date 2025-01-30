@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { Terms } from "@/app/(routes)/(auth)/components/Terms/Terms";
+import LoginForm from "@/app/(routes)/(auth)/login/LoginForm/LoginForm";
 
 export default function LoginPage() {
   return (
     <div className="login-page">
       <p className="login-page__header">Iniciar sesión</p>
+
+      <LoginForm />
 
       <div className="login-page__remember">
         <input type="checkbox" id="terms" className="login-page__remember__input" />
