@@ -4,8 +4,6 @@
 
 
 
-
-
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -16,15 +14,13 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 
 
-
-
 /// Copy text color
 /// @type Color
 $text-color: rgb(221, 221, 221) !default;
 
 /// Main brand color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$brand-color: rgb(229, 0, 20) !default;
 
 /// Light grey
 /// @type Color
@@ -42,14 +38,9 @@ $dark-grey: rgb(68, 68, 68) !default;
 /// @type Color
 $color-logo: rgb(229, 9, 20) !default;
 
-/// Button color primary
-/// @type Color
-$button-color: rgb(255, 255, 255) !default;
-
 /// Button color secondary
 /// @type Color
 $button-color-secondary: rgb(107, 114, 128, 0.5) !default;
-
 
 /// Container's maximum width
 /// @type Length
@@ -71,10 +62,6 @@ $breakpoints: (
   'medium': 768px,
   'large': 1024px,
   ) !default;
-
-
-
-
 
 
 /// Relative or absolute URL where all assets are served from
