@@ -1,46 +1,48 @@
 "use client"
 
-import { useForm } from 'react-hook-form'
-import { zodResolver } from "@hookform/resolvers/zod"
-import { z } from 'zod'
+import { FormData, FormSchema } from '@/types/auth/login.type';
 
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-})
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from 'react-hook-form';
+
+import FormField from '../../components/FormField';
+
 export default function LoginForm() {
 
-  const { register, handleSubmit, formState: { errors } } = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: "",
-    },
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(FormSchema),
   })
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
+
+  const onSubmit = async (data: FormData) => {
+
     console.log(data)
-  }
+
+  };
+
+
 
   return (
     <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
-      <div className="login-form__group">
-        <label className="login-form__label" htmlFor="username">
-          Username
-        </label>
-        <input className="login-form__input"
-          placeholder="shadcn"
-          id="username"
-          {...register("username")}
-          aria-invalid={errors.username ? "true" : "false"}
-        />
-        {errors.username && (
-          <p id="username-error" className="login-form__error">
-            {errors.username.message}
-          </p>
-        )}
-      </div>
-      <button className="button button-primary" type="submit">
+      <FormField
+        type="email"
+        placeholder=""
+        name="email"
+        register={register}
+        error={errors.email}
+      />
+      <FormField
+        type="password"
+        placeholder=""
+        name="password"
+        register={register}
+        error={errors.password}
+      />
+      <button className="button button--primary" type="submit">
         Submit
       </button>
     </form>
