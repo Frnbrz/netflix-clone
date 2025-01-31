@@ -3,28 +3,37 @@
 .slider-video {
   position: relative;
   width: 100%;
-  height: 80vw;
 
-  @media (min-width: 768px) {
+
+  @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
     height: 56.25vw;
   }
 
-  @media (min-width: 1024px) {
+  @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
     height: 45vw;
   }
+
+  @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
+    height: 80vw;
+  }
+
+
 
   &__player {
     filter: brightness(50%);
     object-fit: fill;
     width: 100%;
-    height: 80vw;
 
-    @media (min-width: 768px) {
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
       height: 56.25vw;
     }
 
-    @media (min-width: 1024px) {
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
       height: 45vw;
+    }
+
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
+      height: 80vw;
     }
   }
 
@@ -38,42 +47,43 @@
     z-index: 20;
     top: 20%;
 
-    @media (min-width: 768px) {
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
       width: 50%;
       padding: 0;
       left: 4%;
       top: 10%;
     }
 
-    @media (min-width: 1024px) {
-      top: 0%;
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
+      top: 10%;
     }
 
     &__inner {
       padding-top: 6rem;
 
-      @media (min-width: 768px) {
+      @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
         padding-top: 0;
       }
     }
-
-    // ...existing code...
   }
 
   &__title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px darken(abstracts.$black-color, 50%);
 
-    @media (min-width: 768px) {
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(abstracts.$black-color, 0.5);
+
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
       font-size: 3rem;
     }
 
-    @media (min-width: 1024px) {
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
       font-size: 4rem;
     }
 
-    // ...existing code...
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
+      font-size: 2rem;
+    }
+
   }
 
   &__description {
@@ -81,11 +91,9 @@
     margin-top: 0.5rem;
     font-size: 0.75rem;
 
-    @media (min-width: 768px) {
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
       font-size: 0.8rem;
     }
-
-    // ...existing code...
   }
 
   &__buttons {
@@ -94,8 +102,16 @@
     margin-top: 1.25rem;
     flex-direction: column;
 
-    @media (min-width: 768px) {
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
       flex-direction: row;
+    }
+
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
+      flex-direction: row;
+    }
+
+    @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
+      flex-direction: column;
     }
   }
 
@@ -105,8 +121,6 @@
     opacity: 1;
     height: 14.7vw;
     position: absolute;
-
-    // ...existing code...
   }
 
   &__icon {
@@ -120,7 +134,7 @@
     background-color: abstracts.$button-color-secondary;
 
     &:hover {
-      background-color: darken(abstracts.$button-color-secondary, 20%);
+      background-color: rgb(abstracts.$button-color-secondary, 0.8);
     }
   }
 }
