@@ -8,10 +8,14 @@ export default function LoginPage() {
       <p className="login-page__header">Iniciar sesión</p>
 
       <LoginForm />
-
-      <div className="login-page__remember">
-        <input type="checkbox" id="terms" className="login-page__remember__input" />
-        <label htmlFor="terms" className="login-page__remember__label">
+      <div className="login-page__forget">
+        <Link href="/" className="link">
+          ¿Has olvidado tu contraseña?
+        </Link>
+      </div>
+      <div className="input--checkbox">
+        <input type="checkbox" id="terms" />
+        <label htmlFor="terms">
           Recuérdame
         </label>
       </div>
