@@ -2,39 +2,46 @@
 
 
 .input {
-  &--checkbox {
-    display: flex;
+  width: 100%;
+  padding: 16px 20px 0 20px;
+  height: 50px;
+  border: 1px solid rgb(abstracts.$white-color, 0.4);
+  border-radius: 5px;
+  background: transparent;
 
-    & input {
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      width: 1.125rem;
-      max-height: 1.5em;
-      align-items: center;
-      color: abstracts.$black-color;
-      display: inline-flex;
-      fill: abstracts.$black-color;
-      gap: 2px;
-      padding: 2px;
-      position: relative;
-      text-align: left;
-      z-index: 0;
+  &[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0;
+    padding: 0;
 
-      &:hover {
-        background-color: rgb(abstracts.$black-color, 0.7);
-      }
+    font: inherit;
+    color: currentColor;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 0.125rem;
+    transform: translateY(0.12rem);
 
-      &:focus {
-        box-shadow: 0 0 0 2px abstracts.$black-color;
-      }
+    &:checked::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 5px;
+      width: 6px;
+      height: 14px;
+      border: solid rgb(abstracts.$white-color, 0.8);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
     }
 
-    & label {
+    &+span {
+      margin-left: 10px;
       color: abstracts.$white-color;
-      padding-left: 15px;
-      font-size: 15px;
-      line-height: 1;
     }
   }
 }

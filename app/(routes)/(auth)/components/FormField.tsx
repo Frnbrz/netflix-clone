@@ -10,7 +10,7 @@ const FormField: React.FC<FormFieldProps> = ({
 }) => {
   return (
     <div className="login-form__group">
-      <input className="login-form__input"
+      <input className="input"
         type={type}
         placeholder={placeholder}
         id={name}
