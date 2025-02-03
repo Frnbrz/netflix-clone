@@ -13,12 +13,12 @@ export default function LoginPage() {
           ¿Has olvidado tu contraseña?
         </Link>
       </div>
-      <div className="input--checkbox">
-        <input type="checkbox" id="terms" />
-        <label htmlFor="terms">
+      <label htmlFor="remember">
+        <input type="checkbox" id="remember" className="input" />
+        <span>
           Recuérdame
-        </label>
-      </div>
+        </span>
+      </label>
 
       <div className="login-page__footer">
         <p className="login-page__footer__text">¿Todavía sin Netflix?</p>
