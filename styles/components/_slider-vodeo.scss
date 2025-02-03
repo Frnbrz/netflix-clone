@@ -3,38 +3,22 @@
 .slider-video {
   position: relative;
   width: 100%;
-
+  height: 45vw;
 
   @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
     height: 56.25vw;
   }
 
-  @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
-    height: 45vw;
-  }
-
-  @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
-    height: 80vw;
-  }
-
-
-
   &__player {
     filter: brightness(50%);
     object-fit: fill;
+    height: 80vw;
     width: 100%;
 
     @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
       height: 56.25vw;
     }
 
-    @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
-      height: 45vw;
-    }
-
-    @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
-      height: 80vw;
-    }
   }
 
   &__content {
@@ -46,15 +30,12 @@
     padding: 1rem;
     z-index: 20;
     top: 20%;
+    top: 10%;
 
     @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
       width: 50%;
       padding: 0;
       left: 4%;
-      top: 10%;
-    }
-
-    @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
       top: 10%;
     }
 
@@ -71,19 +52,11 @@
 
     font-weight: bold;
     text-shadow: 0 0 10px rgb(abstracts.$black-color, 0.5);
+    font-size: 2rem;
 
     @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
       font-size: 3rem;
     }
-
-    @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
-      font-size: 4rem;
-    }
-
-    @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
-      font-size: 2rem;
-    }
-
   }
 
   &__description {
@@ -104,14 +77,6 @@
 
     @media only screen and (min-width: map-get(abstracts.$breakpoints, "medium")) {
       flex-direction: row;
-    }
-
-    @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
-      flex-direction: row;
-    }
-
-    @media only screen and (min-width: map-get(abstracts.$breakpoints, "small")) {
-      flex-direction: column;
     }
   }
 
