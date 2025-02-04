@@ -4,11 +4,11 @@ import LoginForm from "@/app/(routes)/(auth)/login/LoginForm/LoginForm";
 
 export default function LoginPage() {
   return (
-    <div className="login-page">
-      <p className="login-page__header">Iniciar sesión</p>
+    <div className="auth-page">
+      <p className="auth-page__header">Iniciar sesión</p>
 
       <LoginForm />
-      <div className="login-page__forget">
+      <div className="auth-page__forget">
         <Link href="/" className="link">
           ¿Has olvidado tu contraseña?
         </Link>
@@ -20,9 +20,9 @@ export default function LoginPage() {
         </span>
       </label>
 
-      <div className="login-page__footer">
-        <p className="login-page__footer__text">¿Todavía sin Netflix?</p>
-        <Link href="/register" className="link login-page__footer__link">
+      <div className="auth-page__footer">
+        <p className="auth-page__footer__text">¿Todavía sin Netflix?</p>
+        <Link href="/register" className="link auth-page__footer__link">
           Suscríbete ya
         </Link>
       </div>
