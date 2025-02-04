@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Logo } from "@/components/Shared/Logo/Logo";
+import Footer from "@/components/Shared/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Cloneflix",
@@ -12,20 +13,19 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="auth-layout">
-      <div className="auth-layout__container">
-        <div className="auth-layout__wrapper">
-          <div className="auth-layout__sidebar" />
-        </div>
-        <header className="auth-layout__header">
+    <body>
+      <div className="auth">
+        <div className="auth__background" />
+        <header className="auth__header">
           <Logo />
         </header>
-        <section className="auth-layout__section">
-          <div className="auth-layout__content">
+        <main className="main">
+          <div className="main__content">
             {children}
           </div>
-        </section>
+        </main>
+        <Footer />
       </div>
-    </main>
+    </body>
   );
 }
