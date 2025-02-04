@@ -5,7 +5,7 @@ import RegisterForm from "./RegisterForm/RegisterForm";
 export default function LoginPage() {
   return (
     <div className="auth-page">
-      <p className="auth-page__header">Iniciar sesión</p>
+      <p className="auth-page__header">Registrarse</p>
 
       <RegisterForm />
 
