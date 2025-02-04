@@ -62,11 +62,51 @@ $white-color: rgb(255, 255, 255);
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 430px,
+  'small': 600px,
   'medium': 768px,
   'large': 1024px,
   ) !default;
 
+/// Text sizes
+/// @type Length
+$text-xs: 0.75rem !default;
+$text-xs--line-height: 1rem !default;
+
+$text-sm: 0.875rem !default;
+$text-sm--line-height: 1.25rem !default;
+
+$text-base: 1rem !default;
+$text-base--line-height: 1.5rem !default;
+
+$text-lg: 1.125rem !default;
+$text-lg--line-height: 1.75rem !default;
+
+$text-xl: 1.25rem !default;
+$text-xl--line-height: 1.75rem !default;
+
+$text-2xl: 1.5rem !default;
+$text-2xl--line-height: 2rem !default;
+
+$text-3xl: 1.875rem !default;
+$text-3xl--line-height: 2.25rem !default;
+
+$text-4xl: 2.25rem !default;
+$text-4xl--line-height: 2.5rem !default;
+
+$text-5xl: 3rem !default;
+$text-5xl--line-height: 1 !default;
+
+$text-6xl: 3.75rem !default;
+$text-6xl--line-height: 1 !default;
+
+$text-7xl: 4.5rem !default;
+$text-7xl--line-height: 1 !default;
+
+$text-8xl: 6rem !default;
+$text-8xl--line-height: 1 !default;
+
+$text-9xl: 8rem !default;
+$text-9xl--line-height: 1 !default;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

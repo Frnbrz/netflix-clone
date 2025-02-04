@@ -35,6 +35,12 @@ a {
     color: abstracts.$link-hover;
     transition: all 0.3s;
   }
+
+  &[aria-disabled="true"] {
+    pointer-events: none;
+    cursor: default;
+    color: rgb(abstracts.$white-color, 0.5)
+  }
 }
 
 

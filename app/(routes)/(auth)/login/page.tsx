@@ -5,7 +5,7 @@ import LoginForm from "@/app/(routes)/(auth)/login/LoginForm/LoginForm";
 export default function LoginPage() {
   return (
     <div className="auth-page">
-      <p className="auth-page__header">Iniciar sesión</p>
+      <header className="auth-page__header">Iniciar sesión</header>
 
       <LoginForm />
       <div className="auth-page__forget">

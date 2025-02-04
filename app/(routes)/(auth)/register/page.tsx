@@ -6,11 +6,7 @@ export default function LoginPage() {
   return (
     <div className="auth-page">
       <p className="auth-page__header">Registrarse</p>
-
       <RegisterForm />
-
-
-
       <div className="auth-page__footer">
         <p className="auth-page__footer__text">¿Ya tienes cuenta?</p>
         <Link href="/login" className="link auth-page__footer__link">

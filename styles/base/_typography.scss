@@ -7,3 +7,106 @@ body {
   color: abstracts.$text-color;
   font: normal 125% / 1.4 abstracts.$text-font-stack;
 }
+
+
+.text {
+
+  &--center {
+    text-align: center;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--underline {
+    text-decoration: underline;
+  }
+
+  &--xs {
+    font-size: abstracts.$text-xs;
+    line-height: abstracts.$text-xs--line-height;
+  }
+
+  &--sm {
+    font-size: abstracts.$text-sm;
+    line-height: abstracts.$text-sm--line-height;
+  }
+
+  &--base {
+    font-size: abstracts.$text-base;
+    line-height: abstracts.$text-base--line-height;
+  }
+
+  &--lg {
+    font-size: abstracts.$text-lg;
+    line-height: abstracts.$text-lg--line-height;
+  }
+
+  &--xl {
+    font-size: abstracts.$text-xl;
+    line-height: abstracts.$text-xl--line-height;
+  }
+
+  &--2xl {
+    font-size: abstracts.$text-2xl;
+    line-height: abstracts.$text-2xl--line-height;
+  }
+
+  &--3xl {
+    font-size: abstracts.$text-3xl;
+    line-height: abstracts.$text-3xl--line-height;
+  }
+
+  &--4xl {
+    font-size: abstracts.$text-4xl;
+    line-height: abstracts.$text-4xl--line-height;
+  }
+
+  &--5xl {
+    font-size: abstracts.$text-5xl;
+    line-height: abstracts.$text-5xl--line-height;
+  }
+
+  &--6xl {
+    font-size: abstracts.$text-6xl;
+    line-height: abstracts.$text-6xl--line-height;
+  }
+
+  &--7xl {
+    font-size: abstracts.$text-7xl;
+    line-height: abstracts.$text-7xl--line-height;
+  }
+
+  &--8xl {
+    font-size: abstracts.$text-8xl;
+    line-height: abstracts.$text-8xl--line-height;
+  }
+
+  &--9xl {
+    font-size: abstracts.$text-9xl;
+    line-height: abstracts.$text-9xl--line-height;
+  }
+}
+
+.title {
+  font-weight: 700;
+
+  &--xl {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  &--section {
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 0.5rem;
+  }
+}
