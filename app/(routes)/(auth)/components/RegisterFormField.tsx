@@ -1,7 +1,7 @@
-import { FormFieldProps } from "@/app/(routes)/(auth)/types/auth/login.type"
 import { CircleX } from "lucide-react";
+import { RegisterFormFieldProps } from "../types/auth/register.type";
 
-const FormField: React.FC<FormFieldProps> = ({
+export const RegisterFormField: React.FC<RegisterFormFieldProps> = ({
   type,
   placeholder,
   name,
@@ -27,4 +27,3 @@ const FormField: React.FC<FormFieldProps> = ({
     </div>
   )
 }
-export default FormField;
