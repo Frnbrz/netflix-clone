@@ -20,7 +20,7 @@ export function Terms() {
         </button>
       </div>
 
-      <div className="terms__text">
+      <div>
         {showExtraTerms && (
           <p>
             La información recopilada por Google reCAPTCHA está sujeta a la
