@@ -3,9 +3,9 @@ import SliderVideo from "@/app/(routes)/(home)/components/SliderVideo/SliderVide
 
 export default function Home() {
   return (
-    <div>
-      <SliderVideo />
+    <main>
       <Navbar />
-    </div>
+      <SliderVideo />
+    </main>
   );
 }

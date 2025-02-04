@@ -22,32 +22,34 @@
 
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: absolute;
+  &__gradient {
+    background: transparent no-repeat contain;
     width: 100%;
-    padding: 1rem;
-    z-index: 20;
-    top: 20%;
-    top: 10%;
-
-    @media only screen and (min-width: map.get(abstracts.$breakpoints, "large")) {
-      width: 50%;
-      padding: 0;
-      left: 4%;
-      top: 10%;
-    }
-
-    &__inner {
-      padding-top: 6rem;
-
-      @media only screen and (min-width: map.get(abstracts.$breakpoints, "medium")) {
-        padding-top: 0;
-      }
-    }
+    opacity: 1;
+    height: 14.7vw;
+    position: absolute;
   }
+}
+
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  z-index: 20;
+  top: 20%;
+  top: 10%;
+
+  @media only screen and (min-width: map.get(abstracts.$breakpoints, "large")) {
+    width: 50%;
+    padding: 0;
+    left: 4%;
+    top: 10%;
+  }
+
 
   &__title {
 
@@ -78,29 +80,6 @@
 
     @media only screen and (min-width: map.get(abstracts.$breakpoints, "medium")) {
       flex-direction: row;
-    }
-  }
-
-  &__gradient {
-    background: transparent no-repeat contain;
-    width: 100%;
-    opacity: 1;
-    height: 14.7vw;
-    position: absolute;
-  }
-
-  &__icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 0.5rem;
-    fill: abstracts.$black-color;
-  }
-
-  &__button-secondary {
-    background-color: abstracts.$button-color-secondary;
-
-    &:hover {
-      background-color: rgb(abstracts.$button-color-secondary, 0.8);
     }
   }
 }
