@@ -1,3 +1,4 @@
+@use "sass:map";
 @use '../abstracts';
 
 .logo {
@@ -10,7 +11,7 @@
   }
 
 
-  @media only screen and (min-width: map-get(abstracts.$breakpoints, "large")) {
+  @media only screen and (min-width: map.get(abstracts.$breakpoints, "large")) {
     font-size: 3rem;
   }
 }
