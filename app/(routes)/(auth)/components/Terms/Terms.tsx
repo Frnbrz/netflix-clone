@@ -14,7 +14,7 @@ export function Terms() {
         </span>
         <button
           onClick={() => setShowExtraTerms(!showExtraTerms)}
-          className="button button--gosh terms__button"
+          className="terms__button button--gosh button"
         >
           Más información
         </button>
@@ -22,7 +22,7 @@ export function Terms() {
 
       <div>
         {showExtraTerms && (
-          <p>
+          <p className="fade-in">
             La información recopilada por Google reCAPTCHA está sujeta a la
             Política de Privacidad y las Condiciones de servicio de Google, y se
             utiliza para proporcionar, mantener y mejorar el servicio de
