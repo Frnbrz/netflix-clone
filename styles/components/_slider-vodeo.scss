@@ -4,7 +4,7 @@
 .slider-video {
   position: relative;
   width: 100%;
-  height: 45vw;
+  height: 100vw;
 
   @media only screen and (min-width: map.get(abstracts.$breakpoints, "medium")) {
     height: 56.25vw;
@@ -13,7 +13,7 @@
   &__player {
     filter: brightness(50%);
     object-fit: fill;
-    height: 80vw;
+    height: 100vw;
     width: 100%;
 
     @media only screen and (min-width: map.get(abstracts.$breakpoints, "medium")) {
