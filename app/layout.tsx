@@ -15,7 +15,9 @@ export default function RootLayout({
     <html lang="en"
       data-lt-installed="true">
       <body>
-        {children}
+        <div className="app-container">
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -1,3 +1,10 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
