@@ -3,7 +3,7 @@ import { Logo } from "@/components/Shared/Logo/Logo";
 import Footer from "@/components/Shared/Footer/Footer";
 
 export const metadata: Metadata = {
-  title: "Cloneflix",
+  title: "Auth",
   description: "A login and register page of Cloneflix",
 };
 
@@ -13,7 +13,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <body>
+    <>
       <div className="auth">
         <div className="auth__background" />
         <header className="auth__header">
@@ -26,6 +26,6 @@ export default function AuthLayout({
         </main>
         <Footer />
       </div>
-    </body>
+    </ >
   );
 }

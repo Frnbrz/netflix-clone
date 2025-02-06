@@ -20,8 +20,8 @@ export default function RegisterForm() {
 
   const onSubmit = async (data: RegisterFormData) => {
     try {
-      const response = await axios.post("/api/form", data); // Make a POST request
-      const { errors = {} } = response.data; // Destructure the 'errors' property from the response data
+      const response = await axios.post("/api/auth/register", data);
+      const { errors = {} } = response.data;
 
       const fieldErrorMapping: Record<string, RegisterValidFieldNames> = {
         email: "email",
@@ -38,9 +38,9 @@ export default function RegisterForm() {
           message: errors[fieldWithError],
         });
       }
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (_error) {
-      alert("Submitting form failed!");
+
+    } catch (error) {
+      console.error("Submitting form failed!, error:", error)
     }
   };
 
