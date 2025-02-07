@@ -1,6 +1,5 @@
 "use client"
 
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
@@ -14,7 +13,7 @@ export default function RegisterForm() {
   const {
     register,
     handleSubmit, setError,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<RegisterFormData>({
     resolver: zodResolver(RegisterFormSchema),
   })
@@ -72,8 +71,11 @@ export default function RegisterForm() {
         register={register}
         error={errors.confirmPassword}
       />
-      <button className="button button--primary" type="submit">
-        Submit
+      <button className="button button--primary" type="submit" aria-disabled={isSubmitting}>
+        {
+          isSubmitting ? (
+            <span className="spinner"></span>
+          ) : <span>Submit</span>}
       </button>
     </form >
   )
