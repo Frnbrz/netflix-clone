@@ -1,0 +1,11 @@
+@use '../abstracts';
+
+.link {
+  color: abstracts.$white-color;
+  text-decoration: none;
+  font-size: clamp(1rem, 1.2vw, 4rem);
+
+  &:hover {
+    color: abstracts.$brand-color;
+  }
+}

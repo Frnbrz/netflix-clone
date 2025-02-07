@@ -1,0 +1,130 @@
+@use "sass:map";
+@use '../abstracts';
+
+.container-mobile {
+  .navbar__mobile {
+    z-index: 30;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s;
+
+    justify-content: space-between;
+    padding: 1rem;
+    display: flex;
+
+    @media only screen and (min-width: map.get(abstracts.$breakpoints, "medium")) {
+      display: none;
+    }
+
+
+
+    &__sidebar {
+      position: fixed;
+      top: 0;
+      width: 75%;
+      left: 0;
+      height: 100%;
+      background-color: rgb(abstracts.$black-color, 0.9);
+      flex-direction: column;
+      padding: 1rem;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(0);
+      border: 1px solid rgb(abstracts.$black-color, 0.5);
+      display: flex;
+    }
+
+    &__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(abstracts.$white-color, 0.3);
+        margin: 1rem 0;
+      }
+    }
+
+    &__item {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.container-desktop {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+
+  @media only screen and (min-width: map.get(abstracts.$breakpoints, "medium")) {
+    display: block;
+  }
+
+  .navbar__desktop {
+    z-index: 30;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &--top {
+      background: transparent;
+    }
+
+    &--bottom {
+      background: abstracts.$black-color;
+    }
+
+    &__left {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    &__menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+
+    }
+
+    &__right {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    &__icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &__profile {}
+  }
+}

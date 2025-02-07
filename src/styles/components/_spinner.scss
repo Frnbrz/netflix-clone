@@ -1,0 +1,21 @@
+$spinner-color: #3498db;
+$spinner-background-color: #f3f3f3;
+
+.spinner {
+  border: 3px solid $spinner-background-color;
+  border-top: 3px solid $spinner-color;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1.6s linear infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

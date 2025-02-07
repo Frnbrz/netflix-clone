@@ -1,0 +1,17 @@
+@use "sass:map";
+@use '../abstracts';
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: abstracts.$color-logo;
+
+  &:hover {
+    color: rgb(abstracts.$color-logo, 0.8);
+  }
+
+
+  @media only screen and (min-width: map.get(abstracts.$breakpoints, "large")) {
+    font-size: 3rem;
+  }
+}
