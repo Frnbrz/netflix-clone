@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Logo } from "@/components/Shared/Logo/Logo";
 import Footer from "@/components/Shared/Footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {
   title: "Auth",
@@ -14,6 +15,7 @@ export default function AuthLayout({
 }>) {
   return (
     <>
+      <ToastContainer />
       <div className="auth">
         <div className="auth__background" />
         <header className="auth__header">
