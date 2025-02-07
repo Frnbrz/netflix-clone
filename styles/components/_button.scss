@@ -59,4 +59,10 @@
     outline-offset: 2px;
     opacity: 0.5;
   }
+
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
