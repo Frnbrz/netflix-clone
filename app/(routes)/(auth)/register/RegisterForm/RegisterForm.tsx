@@ -3,6 +3,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 import axios from 'axios';
 import { RegisterFormData, RegisterFormSchema, RegisterValidFieldNames } from '../../types/auth/register.type';
@@ -39,8 +40,11 @@ export default function RegisterForm() {
         });
       }
 
+      toast.success('Register completed!');
+
     } catch (error) {
-      console.error("Submitting form failed!, error:", error)
+      console.error('Submitting form failed!, error:', error)
+      toast.error(`Submitting form failed!`)
     }
   };
 
