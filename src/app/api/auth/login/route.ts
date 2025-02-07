@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server"
-import bcrypt from "bcrypt"
+import bcryptjs from "bcrypt";
 
-import { db } from "@/src/lib/db"
 import { getUserByEmail } from "@/src/data/user"
 
 export async function POST(request: Request) {
@@ -10,21 +9,17 @@ export async function POST(request: Request) {
   console.log(email, password)
   try {
 
-    console.log(password)
-    const hasedPassword = await bcrypt.hash(password, 10)
 
-    console.log(hasedPassword)
-    const existingUser = getUserByEmail(email);
+    const existingUser = await getUserByEmail(email);
 
-    console.log(existingUser)
-    if (existingUser) {
-      console.log('entra existingUser')
-      return NextResponse.json({ error: "Success on login" }, { status: 200 })
-    }
 
-    if (!existingUser) {
-      console.log('entra !existingUser')
-      return NextResponse.json({ error: "Success on login" }, { status: 400 })
+
+    if (existingUser && existingUser.password) {
+      const passwordsMatch = await bcryptjs.compare(password, existingUser.password)
+
+      if (passwordsMatch) {
+        return NextResponse.json({ message: "Login successful" }, { status: 200 })
+      }
     }
 
     return NextResponse.json({ error: "Login failed" }, { status: 400 })
