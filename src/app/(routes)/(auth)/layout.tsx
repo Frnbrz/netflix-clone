@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Logo } from "@/src/components/Shared/Logo/Logo";
-import Footer from "@/src/components/Shared/Footer/Footer";
+import { Logo } from "@/components/Shared/Logo/Logo";
+import Footer from "@/components/Shared/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {

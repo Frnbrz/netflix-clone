@@ -2,9 +2,9 @@
 
 import { BellRing, Search } from "lucide-react";
 import Link from "next/link";
-import { Logo } from "@/src/components/Shared/Logo/Logo";
-import { itemsNavbar } from "@/src/data/itemsNavbar";
-import { useScrollPosition } from "@/src/hooks/useScrollPosition";
+import { Logo } from "@/components/Shared/Logo/Logo";
+import { itemsNavbar } from "@/data/itemsNavbar";
+import { useScrollPosition } from "@/hooks/useScrollPosition";
 
 export default function NavbarDesktop() {
   const scrollPosition = useScrollPosition()

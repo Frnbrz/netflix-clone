@@ -1,4 +1,5 @@
-import { FormFieldProps } from "@/src/app/(routes)/(auth)/types/auth/login.type"
+
+import { FormFieldProps } from "@/types/auth/login.type";
 import { CircleX } from "lucide-react";
 
 const FormField: React.FC<FormFieldProps> = ({

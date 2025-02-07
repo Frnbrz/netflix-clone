@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 import bcryptjs from "bcrypt";
 
-import { getUserByEmail } from "@/src/data/user"
+import { getUserByEmail } from "@/data/user"
 
 export async function POST(request: Request) {
   const { email, password } = await request.json()

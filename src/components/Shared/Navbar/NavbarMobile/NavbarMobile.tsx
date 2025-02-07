@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { Logo } from "../../Logo/Logo";
 import { BellRing, Menu, Search, X } from 'lucide-react';
-import { itemsNavbar } from '@/src/data/itemsNavbar';
+import { itemsNavbar } from '@/data/itemsNavbar';
 import Link from 'next/link';
 
 export default function NavbarMobile() {

@@ -1,6 +1,6 @@
 "use client"
 
-import { LoginFormData, LoginFormSchema, LoginValidFieldNames } from '@/src/types/auth/login.type';
+import { LoginFormData, LoginFormSchema, LoginValidFieldNames } from '@/types/auth/login.type';
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from 'react-hook-form';

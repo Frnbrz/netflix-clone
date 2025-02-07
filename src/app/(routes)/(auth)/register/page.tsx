@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Terms } from "@/src/app/(routes)/(auth)/components/Terms/Terms";
+import { Terms } from "@/app/(routes)/(auth)/components/Terms/Terms";
 import RegisterForm from "./RegisterForm/RegisterForm";
 
-export default function LoginPage() {
+export default async function RegisterPage() {
+
   return (
     <div className="auth-page">
       <p className="auth-page__header">Registrarse</p>

@@ -1,13 +1,17 @@
+import { auth } from "@/auth";
 import Link from "next/link";
-import { Terms } from "@/src/app/(routes)/(auth)/components/Terms/Terms";
-import LoginForm from "@/src/app/(routes)/(auth)/login/LoginForm/LoginForm";
+import { Terms } from "@/app/(routes)/(auth)/components/Terms/Terms"
+import LoginForm from "@/app/(routes)/(auth)/login/LoginForm/LoginForm";
 
-export default function LoginPage() {
+
+export default async function LoginPage() {
+  const session = await auth()
   return (
     <div className="auth-page">
       <header className="auth-page__header">Iniciar sesión</header>
 
       <LoginForm />
+      <p>{JSON.stringify(session)}</p>
       <div className="auth-page__forget">
         <Link href="/" className="link">
           ¿Has olvidado tu contraseña?

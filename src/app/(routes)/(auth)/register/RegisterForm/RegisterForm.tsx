@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
 import axios from 'axios';
-import { RegisterFormData, RegisterFormSchema, RegisterValidFieldNames } from '@/src/types/auth/register.type';
+import { RegisterFormData, RegisterFormSchema, RegisterValidFieldNames } from '@/types/auth/register.type';
 import { RegisterFormField } from "../../components/RegisterFormField";
 import { useRouter } from "next/navigation";
 
