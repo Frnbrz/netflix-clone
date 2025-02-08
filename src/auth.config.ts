@@ -1,36 +1,30 @@
-import type { NextAuthConfig } from "next-auth";
-import Credentials from "next-auth/providers/credentials";
-import { getUserByEmail } from "./data/user";
-import bcryptjs from "bcrypt";
-import { LoginFormSchema } from "./types/auth/login.type";
+import NextAuth from "next-auth"
+import CredentialsProvider from "next-auth/providers/credentials"
+import { getUserByEmail } from "@/data/user"
+import { LoginFormSchema } from "@/types/auth/login.type"
+import bcrypt from "bcrypt"
 
-export default {
+export const authOptions = {
   providers: [
-    Credentials({
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {},
       async authorize(credentials) {
-        const validatedFields = LoginFormSchema.safeParse(credentials)
+        const validated = LoginFormSchema.safeParse(credentials)
+        if (!validated.success) return null
 
-        if (!validatedFields.success) {
-          return null
-        }
+        const { email, password } = validated.data
+        const user = await getUserByEmail(email)
+        if (!user?.password) return null
 
-        if (validatedFields.success) {
-          const { email, password } = validatedFields.data;
-          const user = await getUserByEmail(email)
-
-          if (!user || !user.password) return null
-
-          const passwordsMatch = await bcryptjs.compare(
-            password,
-            user.password
-          )
-
-          if (passwordsMatch) {
-            return user
-          }
-        }
-        return null
+        const passwordsMatch = await bcrypt.compare(password, user.password)
+        return passwordsMatch ? user : null
       },
     }),
   ],
-} satisfies NextAuthConfig
+  pages: {
+    signIn: "/auth/signin",
+  },
+}
+
+export default NextAuth(authOptions)

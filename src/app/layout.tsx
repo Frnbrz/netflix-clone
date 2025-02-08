@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"
+    <html lang="es"
       data-lt-installed="true">
       <body>
         <div className="app-container">
