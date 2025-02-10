@@ -9,6 +9,7 @@ import { toast } from 'react-toastify';
 
 import FormField from '../../components/FormField';
 import axios from 'axios';
+import { login } from '@/actions/login';
 
 export default function LoginForm() {
 
@@ -27,6 +28,16 @@ export default function LoginForm() {
     try {
       const response = await axios.post("/api/auth/login", data);
       const { errors = {} } = response.data;
+
+      login(data).then((data) => {
+        const errorField = data?.error as LoginValidFieldNames | undefined;
+        if (errorField) {
+          setError(errorField, {
+            type: "server",
+            message: data?.error
+          });
+        }
+      })
 
       const fieldErrorMapping: Record<string, LoginValidFieldNames> = {
         email: "email",

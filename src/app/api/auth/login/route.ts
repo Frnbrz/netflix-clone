@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import bcryptjs from "bcrypt";
+import bcryptjs from "bcryptjs";
 
 import { getUserByEmail } from "@/data/user"
 
@@ -8,12 +8,7 @@ export async function POST(request: Request) {
 
   console.log(email, password)
   try {
-
-
     const existingUser = await getUserByEmail(email);
-
-
-
     if (existingUser && existingUser.password) {
       const passwordsMatch = await bcryptjs.compare(password, existingUser.password)
 
