@@ -11,7 +11,7 @@ export default async function LoginPage() {
       <header className="auth-page__header">Iniciar sesión</header>
 
       <LoginForm />
-      <p>{JSON.stringify(session)}</p>
+      <p>Sesion: {JSON.stringify(session)}</p>
       <div className="auth-page__forget">
         <Link href="/" className="link">
           ¿Has olvidado tu contraseña?
