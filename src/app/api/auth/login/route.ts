@@ -16,10 +16,8 @@ export async function POST(request: Request) {
         return NextResponse.json({ message: "Login successful" }, { status: 200 })
       }
     }
-
     return NextResponse.json({ error: "Login failed" }, { status: 400 })
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
-    return new NextResponse("internal error", { status: 500 })
+    return new NextResponse("internal error: " + error, { status: 500 })
   }
 }
