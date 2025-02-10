@@ -1,30 +1,26 @@
+import bcrypt from 'bcryptjs'
 
 import Credentials from "next-auth/providers/credentials"
-import type { Provider } from "next-auth/providers"
-import { getUserByEmail } from "./data/user"
 
-const providers: Provider[] = [
-  Credentials({
-    // You can specify which fields should be submitted, by adding keys to the `credentials` object.
-    // e.g. domain, username, password, 2FA token, etc.
-    credentials: {
-      email: {},
-      password: {},
-    },
-    authorize: async (credentials) => {
-      let user = null
+import type { NextAuthConfig } from "next-auth"
+import { getUserByEmail } from '@/data/user'
+import { LoginFormSchema } from '@/types/auth/login.type'
 
-      const pwHash =
-        user = await getUserByEmail(credentials.email)
 
-      if (!user) {
-        // No user found, so this is their first attempt to login
-        // Optionally, this is also the place you could do a user registration
-        throw new Error("Invalid credentials.")
+export default {
+  providers: [Credentials({
+    async authorize(credentials) {
+      const validatedFields = LoginFormSchema.safeParse(credentials)
+
+      if (validatedFields.success) {
+        const { email, password } = validatedFields.data;
+        const user = await getUserByEmail(email);
+        if (!user || !user.password) return null;
+
+        const passwordMatch = await bcrypt.compare(password, user.password);
+        if (passwordMatch) return user;
       }
-
-      // return user object with their profile data
-      return user
-    },
-  }),
-]
+      return null;
+    }
+  })],
+} satisfies NextAuthConfig
